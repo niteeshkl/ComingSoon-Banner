@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayro Digital | Coming Soon</title>
     <meta name="description" content="Ayro Digital - Something amazing is on the way. Stay tuned!">
+    <link rel="icon" type="image/png" href="Ayro Light BG Short.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,15 +16,20 @@
             box-sizing: border-box;
         }
 
+        html {
+            overflow: hidden;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
+            width: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%);
-            color: #ffffff;
-            overflow: hidden;
+            background: #ffffff;
+            color: #1a1a2e;
             position: relative;
         }
 
@@ -34,32 +40,34 @@
             height: 600px;
             border-radius: 50%;
             filter: blur(120px);
-            opacity: 0.4;
+            opacity: 0.35;
             animation: float 8s ease-in-out infinite;
         }
 
         .bg-gradient-1 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00A0C6 0%, #3366FF 100%);
             top: -200px;
             right: -100px;
             animation-delay: 0s;
+            opacity: 0.08;
         }
 
         .bg-gradient-2 {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #003A63 0%, #00A0C6 100%);
             bottom: -200px;
             left: -100px;
             animation-delay: -4s;
+            opacity: 0.08;
         }
 
         .bg-gradient-3 {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #FFBF2F 0%, #00A0C6 100%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 400px;
             height: 400px;
-            opacity: 0.2;
+            opacity: 0.06;
             animation-delay: -2s;
         }
 
@@ -68,69 +76,69 @@
             50% { transform: translateY(-30px) scale(1.05); }
         }
 
+        .bg-gradient-3 {
+            animation: float3 8s ease-in-out infinite;
+            animation-delay: -2s;
+        }
+
+        @keyframes float3 {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) translateY(-30px) scale(1.05); }
+        }
+
         .container {
             text-align: center;
             z-index: 10;
             padding: 2rem;
-            max-width: 600px;
+            width: 100%;
+            max-width: 650px;
+            /* Changed: Using flex: 1 to take available space and center content */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
         }
 
         .logo {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .logo-text {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, #ffffff 0%, #a8a8a8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .logo-text span {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tagline {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #888;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 3rem;
+        .logo img {
+            height: 80px;
+            width: auto;
         }
 
         h1 {
             font-size: 3rem;
             font-weight: 300;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            line-height: 1.3;
+            color: #1a1a2e;
         }
 
         h1 strong {
             font-weight: 600;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00A0C6 0%, #3366FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            color: #888;
-            margin-bottom: 3rem;
-            line-height: 1.6;
+            font-size: 1.125rem;
+            color: rgba(0, 0, 0, 0.5);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
         }
 
         .divider {
             width: 60px;
             height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00A0C6 0%, #3366FF 100%);
             margin: 0 auto 2rem;
             border-radius: 2px;
         }
@@ -139,45 +147,49 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #667eea;
+            color: #00A0C6;
             text-decoration: none;
-            font-size: 0.95rem;
-            padding: 0.75rem 1.5rem;
-            border: 1px solid rgba(102, 126, 234, 0.3);
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.85rem 2rem;
+            border: 1px solid rgba(0, 160, 198, 0.3);
             border-radius: 50px;
             transition: all 0.3s ease;
         }
 
         .contact:hover {
-            background: rgba(102, 126, 234, 0.1);
-            border-color: rgba(102, 126, 234, 0.6);
+            background: rgba(0, 160, 198, 0.1);
+            border-color: rgba(0, 160, 198, 0.6);
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 160, 198, 0.15);
         }
 
         .contact svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
         }
 
         .footer {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #444;
-            font-size: 0.85rem;
+            /* Changed: Removed margin-top: auto, using padding instead */
+            padding: 2rem;
+            color: rgba(0, 0, 0, 0.3);
+            font-size: 0.875rem;
+            z-index: 10;
         }
 
         @media (max-width: 600px) {
             h1 {
                 font-size: 2rem;
             }
-            .logo-text {
-                font-size: 2rem;
+            .logo img {
+                height: 56px;
             }
-            .tagline {
-                font-size: 0.8rem;
-                letter-spacing: 2px;
+            .subtitle {
+                font-size: 1rem;
+            }
+            .contact {
+                font-size: 0.9rem;
+                padding: 0.75rem 1.5rem;
             }
         }
     </style>
@@ -189,17 +201,17 @@
 
     <div class="container">
         <div class="logo">
-            <div class="logo-text">Ayro<span>Digital</span></div>
+            <img src="Ayro Light BG Long.png" alt="Ayro Digital Logo">
         </div>
-        <p class="tagline">Digital Solutions</p>
-        
+
+
         <h1>Something <strong>amazing</strong><br>is coming soon</h1>
-        
+
         <p class="subtitle">We're working hard to bring you something extraordinary.<br>Stay tuned for the launch!</p>
-        
+
         <div class="divider"></div>
-        
-        <a href="mailto:hello@ayrodigital.ai" class="contact">
+
+        <a href="mailto:support@ayrodigital.ai" class="contact">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
@@ -207,6 +219,6 @@
         </a>
     </div>
 
-    <p class="footer">© 2025 Ayro Digital. All rights reserved.</p>
+    <p class="footer">&copy; 2025 Ayro Digital. All rights reserved.</p>
 </body>
 </html>
